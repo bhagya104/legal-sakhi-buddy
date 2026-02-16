@@ -4,7 +4,7 @@ import { ChatMessage, TypingIndicator } from "@/components/ChatMessage";
 import { ChatInput } from "@/components/ChatInput";
 import { QuickPrompts } from "@/components/QuickPrompts";
 import { motion } from "framer-motion";
-import { ArrowLeft, Trash2, Shield } from "lucide-react";
+import { ArrowLeft, Trash2, Shield, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Chat = () => {
@@ -36,6 +36,15 @@ const Chat = () => {
           <h1 className="text-sm font-semibold text-foreground font-sans">Legal Sakhi</h1>
           <p className="text-xs text-muted-foreground font-sans">Legal awareness assistant</p>
         </div>
+        {messages.length > 0 && (
+          <Link
+            to="/case-file"
+            className="w-9 h-9 rounded-lg flex items-center justify-center hover:bg-secondary transition-colors"
+            title="Generate Case File"
+          >
+            <FileText className="w-4 h-4 text-muted-foreground" />
+          </Link>
+        )}
         {messages.length > 0 && (
           <button
             onClick={clearChat}
