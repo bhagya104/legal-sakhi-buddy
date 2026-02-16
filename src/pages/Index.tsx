@@ -9,6 +9,7 @@ import {
   TrendingUp,
   Heart,
   Scale,
+  FileText,
 } from "lucide-react";
 
 const features = [
@@ -83,14 +84,15 @@ const Index = () => {
                 <MessageCircle className="w-5 h-5" />
                 Start a Conversation
               </Link>
-              <a
-                href="#features"
-                className="inline-flex items-center justify-center rounded-xl border border-primary-foreground/20
+              <Link
+                to="/case-file"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-primary-foreground/20
                   px-8 py-4 text-base font-medium text-primary-foreground/80
                   hover:bg-primary-foreground/5 transition-colors font-sans"
               >
-                Learn More
-              </a>
+                <FileText className="w-5 h-5" />
+                Generate Case File
+              </Link>
             </div>
           </motion.div>
         </div>
